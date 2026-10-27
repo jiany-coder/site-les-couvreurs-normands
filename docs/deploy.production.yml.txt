@@ -1,0 +1,56 @@
+name: Production
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PUBLIC_URL: ""
+      CI: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Domaine du site (fichier site-domain.txt)
+        run: |
+          D=$(tr -d ' \r\n' < site-domain.txt)
+          echo "REACT_APP_SITE_URL=https://$D" >> "$GITHUB_ENV"
+          echo "SITE_URL=https://$D" >> "$GITHUB_ENV"
+          echo "SITE_DOMAIN=$D" >> "$GITHUB_ENV"
+      - run: npm install --legacy-peer-deps --no-audit --no-fund
+      - run: npm run build:static
+      - name: Domaine personnalisé
+        run: |
+          printf '%s\n' "$SITE_DOMAIN" > build/CNAME
+          touch build/.nojekyll
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build
+          publish_branch: gh-pages
+          force_orphan: true
+      - name: IndexNow (prévenir Bing, Yandex et autres)
+        continue-on-error: true
+        run: |
+          sleep 90
+          python3 - <<'PY'
+          import os, re, json, urllib.request
+          urls = re.findall(r"<loc>([^<]+)</loc>", open("build/sitemap.xml", encoding="utf-8").read())
+          dom = os.environ["SITE_DOMAIN"]
+          key = "28aec102d9fc3fcd7c2f240a80f097de"
+          for i in range(0, len(urls), 9000):
+              body = json.dumps({"host": dom, "key": key, "keyLocation": f"https://{dom}/{key}.txt", "urlList": urls[i:i+9000]}).encode()
+              req = urllib.request.Request("https://api.indexnow.org/indexnow", body, {"Content-Type": "application/json; charset=utf-8"})
+              try:
+                  print(urllib.request.urlopen(req, timeout=30).status)
+              except Exception as e:
+                  print("IndexNow:", e)
+          PY
