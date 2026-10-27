@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/site-les-couvreurs-normands/static/css/main.7f10e2da.css",
+    "main.js": "/site-les-couvreurs-normands/static/js/main.4cc62e1d.js",
+    "index.html": "/site-les-couvreurs-normands/index.html",
+    "main.7f10e2da.css.map": "/site-les-couvreurs-normands/static/css/main.7f10e2da.css.map",
+    "main.4cc62e1d.js.map": "/site-les-couvreurs-normands/static/js/main.4cc62e1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f10e2da.css",
+    "static/js/main.4cc62e1d.js"
+  ]
+}

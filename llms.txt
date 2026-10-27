@@ -1,0 +1,29 @@
+# Les Couvreurs Normands
+
+> Couvreur à Deauville (14800) : réparation, rénovation, démoussage, zinguerie et entretien de toiture dans tout le Calvados, de la Côte Fleurie (Deauville, Trouville-sur-Mer, Cabourg, Honfleur) à Lisieux, Caen, Bayeux, Falaise et Vire. Devis gratuit. Tél. [TÉLÉPHONE].
+
+## Pages principales
+- https://jiany-coder.github.io/site-les-couvreurs-normands/
+- https://jiany-coder.github.io/site-les-couvreurs-normands/reparation-toiture-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/renovation-toiture-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/remplacement-tuiles-ardoises-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/reparation-faitage-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/demoussage-toiture-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/hydrofuge-toiture-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/couvreur-zingueur-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/gouttieres-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/etancheite-toiture-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/traitement-charpente-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/pose-velux-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/ravalement-facade-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/peinture-exterieure-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/nettoyage-facade-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/tarifs-couvreur-deauville
+- https://jiany-coder.github.io/site-les-couvreurs-normands/zone-d-intervention
+- https://jiany-coder.github.io/site-les-couvreurs-normands/a-propos
+- https://jiany-coder.github.io/site-les-couvreurs-normands/blog
+- https://jiany-coder.github.io/site-les-couvreurs-normands/contact
+
+## Pages communes
+- https://jiany-coder.github.io/site-les-couvreurs-normands/zone-d-intervention (liste des 525 communes, une page /couvreur-<commune> par commune)
+- Pages prestation x ville : /<prestation>-<ville> pour les villes principales (Trouville-sur-Mer, Touques, Villers-sur-Mer, Houlgate, Cabourg, Honfleur, Pont-l'Évêque, Lisieux, Caen, Bayeux, Falaise, Vire…)
